@@ -15,7 +15,9 @@ function App() {
           <pointLight position={[10, 10, 10]} />
           <OrbitControls />
           {modelArray.map((i) => {
-            return <ModelComponent position={Math.random() - 0.5 * 10} />
+            return (
+              <ModelComponent key={i} position={Math.random() - 0.5 * 10} />
+            )
           })}
           <Stats />
         </Canvas>
